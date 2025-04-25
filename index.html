@@ -5,7 +5,7 @@
         <head>
             <meta charset="UTF-8" />
             <title>中島風ポートフォリオ</title>
-            <link rel="stylesheet" href="style.css" />
+            <!-- <link rel="stylesheet" href="style.css" /> -->
             <link
                 href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap"
                 rel="stylesheet"
@@ -18,8 +18,27 @@
                 <!-- 左側 -->
                 <div class="left">
                     <h1>KYOGO<br />HAYATA</h1>
+                    <div class="catchArea_bg background3"></div>
+                    <div class="catchArea_inner">
+                        <div class="catchArea_bg background3"></div>
+                    </div>
                 </div>
                 <!-- 右側 -->
+                <!-- he -->
+                <header class="site-header">
+                    <div class="header-container">
+                    <a href="/" class="logo">KENTA NAKAJIMA</a>
+                        <nav class="main-nav">
+                        <ul>
+                            <li><a href="#profile">PROFILE</a></li>
+                            <li><a href="#gallery">GALLERY</a></li>
+                            <li><a href="#news">ORDER</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                </header>
+
                 <div class="right">
                     <!-- タイトル -->
                     <div class="section">
@@ -28,13 +47,16 @@
                     </div>
 
                     <!-- プロフィール -->
-                    <section class="profile-section">
+                    <section id= ="profile-section">
                         <div class="profile-inner">
                             <img
                                 src="./assets/img/profile.jpg"
                                 alt="プロフィール画像"
-                                class="profile-img"
-                            />
+                                class="profile-img"/>
+                            <!-- <header>
+                                <div class=""></div>
+                            </header> -->
+
                             <h2 class="profile-name">早田匡吾</h2>
                             <p class="profile-title">芸大生 / アーティスト</p>
                             <p class="profile-description">
@@ -96,13 +118,15 @@
                     </div>
 
                     <!-- インスタグラム ↓-->
+
+                    <!-- <footer> -->
+                <footer>
+                    <small>Copyright &copy; プライバシーポリシー</small>
+                    &copy; sns
+                </footer>
                 </div>
             </div>
-            <!-- <footer>
-
-    <small>Copyright &copy; プライバシーポリシー</small>
-
-  </footer> -->
+            
 
             <script>
                 const fadeEls = document.querySelectorAll(".fade-in");
