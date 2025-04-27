@@ -8,8 +8,8 @@
   html, body {
     height: 100%;
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: #c98f8f;
-    color: #fff;
+    background-color: #f9f7f7;
+    color: #fffefe;
   }
 
 /* header */
@@ -19,7 +19,7 @@
   }
   
   .site-header {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #eee;
     padding: 20px 0;
     position: sticky;
@@ -104,6 +104,7 @@
   .section h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: rgb(8, 8, 8);
   }
   
   .section img {
@@ -115,7 +116,7 @@
   
   .section p {
     font-size: 1rem;
-    color: #ccc;
+    color: #181717;
     line-height: 1.8;
   }
 
@@ -123,7 +124,7 @@
 
   .profile-section {
     padding: 5rem 2rem;
-    background-color: #fff;
+    background-color: #b4d2dc;
     color: #111;
     text-align: center;
   }
@@ -214,15 +215,118 @@
     background-color: #555;         /* 薄めのグレー */
   }
 
+  .hidden {
+    display: none;
+  }
+  
+  /* ポップアップ全体 */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* ポップアップ画像 */
+#popup-img {
+  max-width: 60%;
+  max-height: 60%;
+  /* box-shadow: 0 0 20px #fff; */
+  border-radius: 8px;
+  object-fit: contain;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.popup.visible #popup-img {
+  transform: scale(1);
+}
+
+/* 閉じるボタン */
+#popup-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 表示する時 */
+.popup.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 最初は非表示 */
+.hidden {
+  display: none;
+}
+
   
   /* オーダーメイド */
+  .section {
+    padding: 60px 20px;
+    background-color: #f8f1f5;
+  }
+  
+  .order-made {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .order-made h2 {
+    text-align: left;
+  }
+  
+  .order-made .main {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .order-made p {
+    font-size: 18px;
+    color: #777;
+    text-align: left; /* ←★ここ追加！ */
+  margin-left: 10px; /* ←★ちょっとだけ左に余白つけるとキレイ */
+  }
+  
+  .order-made a img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .order-made a img:hover {
+    transform: scale(1.05);
+  }
+  
 
   /* footer */
 
 footer {
   text-align: center;
-  background-color: lightskyblue;
-  color: white;
+  background-color: rgb(228, 231, 233);
+  color: rgb(15, 14, 14);
   padding: 20px 0;
   margin-top: 100px;
   font-size: 20px;
