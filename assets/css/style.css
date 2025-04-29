@@ -44,6 +44,8 @@
     text-decoration: none;
     letter-spacing: 1px;
   }
+
+  
   
   .main-nav ul {
     list-style: none;
@@ -61,7 +63,7 @@
   }
   
   .main-nav a:hover {
-    color: #888;
+    color: #efeaea;
   }
   
   
@@ -124,7 +126,7 @@
 
   .profile-section {
     padding: 5rem 2rem;
-    background-color: #b4d2dc;
+    background-color: white;
     color: #111;
     text-align: center;
   }
@@ -328,7 +330,82 @@ footer {
   background-color: rgb(228, 231, 233);
   color: rgb(15, 14, 14);
   padding: 20px 0;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   font-size: 20px;
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  color: #666;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #000; /* ホバー時に濃い色に */
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000; /* 背景を黒に */
+  font-size: 14px;
+  color: #fff; /* 文字を白に */
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #cfa3a3; /* リンクも白に */
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+  color: #1e90ff; /* ホバー時に青っぽい光の色に */
+  transform: scale(1.05); /* 少しだけ拡大して目立たせる */
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1); /* アイコンを白っぽく反転 */
+  transition: transform 0.3s ease;
+}
+
+footer a:hover img {
+  transform: scale(1.2); /* ホバー時にアイコンもちょっと大きく */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 
