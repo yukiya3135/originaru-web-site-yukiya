@@ -71,3 +71,32 @@ popup.addEventListener("click", (e) => {
         }, 300);
     }
 });
+
+// ------------------------------------------------------------
+// Randomize the background image of the left panel on each load with fade-in
+(function () {
+    const leftPane = document.querySelector(".left");
+    if (!leftPane) return;
+
+    // Collect all gallery image sources defined in the markup
+    const gallerySrcs = Array.from(
+        document.querySelectorAll(".photo-section img")
+    )
+        .map((img) => img.getAttribute("src"))
+        .filter((src) => src && src.trim() !== "");
+
+    if (gallerySrcs.length === 0) return;
+
+    const randomSrc =
+        gallerySrcs[Math.floor(Math.random() * gallerySrcs.length)];
+
+    // フェードイン開始（透明にする）
+    leftPane.classList.add("fade-bg");
+
+    // 少し待って背景変更 → 完了後、フェードクラスを外す
+    setTimeout(() => {
+        leftPane.style.backgroundImage = `url(${randomSrc})`;
+        leftPane.classList.remove("fade-bg");
+    }, 800); // 0.3秒くらいで自然に
+})();
+
