@@ -64,7 +64,8 @@ popupClose.addEventListener("click", () => {
 });
 
 popup.addEventListener("click", (e) => {
-    if (e.target === popup) { // 背景自体をクリックしたときのみ
+    if (e.target === popup) {
+        // 背景自体をクリックしたときのみ
         popup.classList.remove("visible");
         setTimeout(() => {
             popup.classList.add("hidden");
@@ -99,4 +100,3 @@ popup.addEventListener("click", (e) => {
         leftPane.classList.remove("fade-bg");
     }, 800); // 0.3秒くらいで自然に
 })();
-

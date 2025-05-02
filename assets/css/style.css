@@ -17,6 +17,11 @@
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
   
   .site-header {
     background-color: #1e1e1e(255, 255, 255);
@@ -391,7 +396,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #1e90ff; /* ホバー時に青っぽい光の色に */
+  color: #ed77d2; /* ホバー時に青っぽい光の色に */
   transform: scale(1.05); /* 少しだけ拡大して目立たせる */
 }
 
